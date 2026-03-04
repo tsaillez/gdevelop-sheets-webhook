@@ -1,0 +1,6 @@
+{
+  "name": "gdevelop-sheets-webhook",
+  "version": "1.0.0",
+  "description": "Webhook for GDevelop to Google Sheets",
+  "private": true
+}
