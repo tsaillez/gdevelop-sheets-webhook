@@ -1,5 +1,3 @@
-const fetch = require('node-fetch');
-
 // REPLACE THIS WITH YOUR APPS SCRIPT URL (ends in /exec)
 const SHEETS_URL = "https://script.google.com/macros/s/AKfycbxOCrQ5Q1GJTstUbQWIRGv8fLZcTXNXsLwzBRBElC8zsTVfmggbceruLCYQ9aGLkJR9/exec";
 
@@ -27,7 +25,7 @@ module.exports = async (req, res) => {
       });
     }
 
-    // Send to Google Sheets
+    // Send to Google Sheets using native fetch
     const response = await fetch(SHEETS_URL, {
       method: "POST",
       headers: {
