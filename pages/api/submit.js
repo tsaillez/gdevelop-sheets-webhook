@@ -16,13 +16,22 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const payload = req.body;
+    let payload = req.body;
 
     // Validate data
     if (!payload.PPID || !payload.trials) {
       return res.status(400).json({
         error: "Missing PPID or trials in payload"
       });
+    }
+
+    // Convert trials array to object if it's an array
+    if (Array.isArray(payload.trials)) {
+      const trialsObj = {};
+      payload.trials.forEach((trial, index) => {
+        trialsObj[index.toString()] = trial;
+      });
+      payload.trials = trialsObj;
     }
 
     // Send to Google Sheets using native fetch
