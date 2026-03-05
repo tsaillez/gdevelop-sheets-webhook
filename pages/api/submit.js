@@ -1,5 +1,5 @@
 // REPLACE THIS WITH YOUR APPS SCRIPT URL (ends in /exec)
-const SHEETS_URL = "https://script.google.com/macros/s/AKfycbxOCrQ5Q1GJTstUbQWIRGv8fLZcTXNXsLwzBRBElC8zsTVfmggbceruLCYQ9aGLkJR9/exec";
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycbxp7bQa2nzzTTb6g1UFSTR3YkQ8IfuYBODVvWVw4TUkjzPppbM8GZV3cAwavLNNYuWM/exec";
 
 module.exports = async (req, res) => {
   // Enable CORS
