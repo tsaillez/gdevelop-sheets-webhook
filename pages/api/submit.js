@@ -18,10 +18,10 @@ module.exports = async (req, res) => {
   try {
     let payload = req.body;
 
-    // Validate data
-    if (!payload.PPID || !payload.trials) {
+    // Validate data - only trials required now
+    if (!payload.trials) {
       return res.status(400).json({
-        error: "Missing PPID or trials in payload"
+        error: "Missing trials in payload"
       });
     }
 
@@ -51,11 +51,10 @@ module.exports = async (req, res) => {
       });
     }
 
-    console.log("Data sent to Sheets for PPID:", payload.PPID);
+    console.log("Data sent to Sheets");
     res.status(200).json({
       status: "success",
-      message: "Data sent to Google Sheets",
-      ppid: payload.PPID
+      message: "Data sent to Google Sheets"
     });
 
   } catch (error) {
